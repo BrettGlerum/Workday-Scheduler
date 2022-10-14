@@ -1,11 +1,11 @@
 
 var today = moment();
-var timeBlockEl = document.querySelector('.container');
+var timeBlockEl = document.querySelector('.container'); //global variables
 
-$('#currentDay').text(today.format('LLLL')); 
+$('#currentDay').text(today.format('LLLL')); //sets the format of the date
 
-
-$('.saveBtn').on('click', function () {
+//adds event to save input after page refresh
+$('.saveBtn').on('click', function () { 
 
   var textValue = $(this).siblings('.description').val();
 
@@ -15,7 +15,7 @@ $('.saveBtn').on('click', function () {
   localStorage.setItem(timeKey, textValue);
 });
 
-
+//grabs the local storage of the hours
 $('#hour9 .description').val(localStorage.getItem('hour9'));
 $('#hour10 .description').val(localStorage.getItem('hour10'));
 $('#hour11 .description').val(localStorage.getItem('hour11'));
@@ -27,16 +27,16 @@ $('#hour16 .description').val(localStorage.getItem('hour16'));
 $('#hour17 .description').val(localStorage.getItem('hour17'));
 
 
-
+//function to determine what the current hour is
 function auditTask() {
   
   var currentHour = today.hours();
 
-  
+  //parses the hours into numerical data
   $('.time-block').each(function () {
     var timeId = parseInt($(this).attr('id').split("hour")[1]);
 
-   
+   //conditional statement to determine if hour is past, present, or future
     if (timeId < currentHour) {
       $(this).addClass('past');
     }
@@ -53,7 +53,7 @@ function auditTask() {
   });
 }
 
-
+//function to refresh page every minute
 auditTask();
 
 
