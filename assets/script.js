@@ -1,4 +1,3 @@
-
 var today = moment();
 var timeBlockEl = document.querySelector('.container'); //global variables
 

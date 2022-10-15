@@ -41,7 +41,7 @@ body {
     color: #000000;
     border-top: 1px dashed #000000;
   }
-/*changed past to red, present to grey, future to green*/
+
   .past {
     background-color: #ff6961;
     color: white;
