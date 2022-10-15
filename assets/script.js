@@ -60,3 +60,14 @@ setTimeout(function () {
 
   location = ''; 
 }, 1000 * 60);
+
+app.get('/', function(req,res) {
+  res.send(browserRefresh('index.html'));
+});
+
+function browserRefresh(filePath) {
+  var html = fs.readFileSync(filePath);
+  var $ = cheerio.load(html);
+  $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
+  return $.html();
+}
