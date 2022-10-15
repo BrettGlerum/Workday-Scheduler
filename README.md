@@ -8,7 +8,7 @@ This project is a functional weekly planner that also works as a calendar. The m
 
 The website is titled "Workday Planner" and has the current date and time at the top of the page. Under that is eight rows that take up the entire page, with each row lebeled as a different hour of the average workday. Within every row is a text box and a save icon, where the user can type out their plans for the day and save them there, even after the page is refreshed. The hours are also color coded, where the past is red, the present is grey, and the future is green. The user can then reuse the planner every day of the week as it is cleared every day after the day is over. 
 
-
+Screenshot of Deployed Application: ![screenshot](https://github.com/BrettGlerum/Workday-Scheduler/blob/main/assets/images/Screenshot%20(10).png)
 
 # License
 
